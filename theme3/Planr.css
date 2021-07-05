@@ -1,0 +1,181 @@
+/* Tag Style */
+body{
+    margin : 0;
+    font-family : monospace;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    height : 5vh;
+    background: #3d3d3d;
+    color: white;
+    align-items:center;
+}
+
+
+ul{
+    list-style-type : none;
+    width: 90vw;
+    padding: 0;
+    margin : 0;
+}
+
+li{
+    background-color : #f5f6f8;
+    height : 36px;
+    display: flex;
+    padding: 0 4px;
+    border-bottom : 2px solid white;
+}
+
+dialog{
+    position: absolute;
+    box-shadow : 0 5px 15px rgb(0 0 0 / 50%);
+    border : none;
+    border-radius : 10px;
+}
+
+/* Class Style */
+.sprint{
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction : column;
+}
+
+.wp-container{
+    margin-bottom:0;
+    height: 80vh;
+    overflow: auto;
+}
+
+.header-container{
+    margin-top:1em;
+}
+
+.header-container > li {
+    background-color : transparent;
+}
+
+.wp-id {
+    width:10%;
+}
+
+.wp-name {
+    width:60%;
+}
+
+.wp-owner {
+    width:10%;
+    cursor : pointer;
+}
+
+.wp-owner > span {
+    padding: 3px;
+    border-radius: 3px;
+    text-decoration : underline;
+}
+
+.wp-action-delete {
+    cursor : pointer;
+}
+
+.wp-action-delete > span {
+    padding: 3px;
+    background: #fae2e5;
+    color: #e60225;
+    border-radius: 3px;
+}
+
+.wp-status {
+    width:10%;
+    color : white;
+    cursor : pointer;
+    font-weight : 600;
+}
+
+.wp-point , .wp-total-point{
+    width:10%;
+}
+
+.wp-total-point{
+    color : white;
+    background-color : black;
+}
+
+.wp-space-90{
+    width : 90%;
+}
+
+.wp-item{
+    font-size: 1.25em;
+    display: flex;
+    align-items: center;
+}
+
+.in-progress{
+    color : #fdab3d;
+}
+
+.completed{
+    color : #00c875;
+}
+
+.blocked{
+    color : #e2445c;
+}
+
+.not-groomed{
+    color : #a25ddc;
+}
+
+.not-started {
+    color : #c4c4c4;
+}
+
+.center{
+    justify-content : center;
+}
+
+.new-status{
+    padding : 12px;
+    font-size:1.25em;
+    margin : 0 5px;
+    cursor:pointer;
+    font-weight : 600;
+}
+
+.new-owner{
+    padding: 12px;
+    font-size:1.25em;
+    margin : 0 5px;
+    cursor:pointer;
+}
+
+.modal{
+    display : flex;
+    flex-direction: column;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2em;
+    margin: 4px;
+}
+
+.modal-actions > span {
+    cursor : pointer;
+}
+
+.header > .wp-item > span {
+    text-decoration : underline;
+    color : #3d3d3d;
+    background : transparent;
+    font-weight:600;
+}

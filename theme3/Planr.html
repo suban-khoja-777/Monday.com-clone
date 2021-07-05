@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Planr+</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
+        <link type="text/css" rel="stylesheet" href="./Planr.css" />
+    </head>
+    
+    
+    <body onload="loadApp();">
+        
+        <header>
+            <h3 class="sprint"></h3>
+        </header>
+        
+        <div class="container">
+            <ul class="header-container">
+                <li class="header">
+                    <div class="wp-item wp-id">
+                        <span data-column="wp-id">Id</span>
+                    </div>
+                    <div class="wp-item wp-name">
+                        <span data-column="wp-name">Name</span>
+                    </div>
+                    <div class="wp-item wp-owner center">
+                        <span data-column="wp-owner">Owner</span>
+                    </div>
+                    <div class="wp-item wp-status center">
+                        <span data-column="wp-status">Status</span>
+                    </div>
+                    <div class="wp-item wp-point center">
+                        <span data-column="wp-point">Point</span>
+                    </div>
+                </li>
+            </ul>
+            <ul class="wp-container">
+                
+            </ul>
+            <ul class="wp-aggregator">
+                <li>
+                    <div class="wp-item wp-space-90">
+                        
+                    </div>
+                    
+                    <div class="wp-item wp-total-point center">
+                        <span>25</span>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        
+        <dialog id="status_modal">
+            <div class="modal-actions">
+                <span onclick="this.parentElement.parentElement.close();">x</span>
+            </div>
+            <div class="modal">
+                
+            </div>
+        </dialog>
+        
+        <dialog id="owner_modal">
+            <div class="modal-actions">
+                <span onclick="this.parentElement.parentElement.close();">x</span>
+            </div>
+            <div class="modal">
+                
+            </div>
+        </dialog>
+        
+        <template id="STATUS_MODAL_ITEM">
+            <div class="new-status center" onclick="handleStatusChange(event)">
+                <span></span>
+            </div>
+        </template>
+        
+        <template id="OWNER_MODAL_ITEM">
+            <div class="new-owner center" onclick="handleOwnerChange(event)">
+                <span></span>
+            </div>
+        </template>
+        
+        <template id="WORK_ITEM">
+            <li>
+                <div class="wp-item wp-id">
+                    <span data-column="wp-id" contenteditable="false"></span>
+                </div>
+                <div class="wp-item wp-name">
+                    <span data-column="wp-name" contenteditable="true" onblur="onValueChange(event)"></span>
+                </div>
+                <div class="wp-item wp-owner center" onclick="handleOwnerClick(event)">
+                    <span data-column="wp-owner"></span>
+                </div>
+                <div class="wp-item wp-status center" onclick="handleStatusClick(event)">
+                    <span data-column="wp-status"></span>
+                </div>
+                <div class="wp-item wp-point center">
+                    <span data-column="wp-point" contenteditable="true" onblur="onValueChange(event)"></span>
+                </div>
+                
+            </li>
+        
+        </template>
+    
+        <script src="./Planr.js"></script>
+        
+    </body>
+</html>
